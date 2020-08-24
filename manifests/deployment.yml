@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: habaruhexamplevotingapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: habaruhexamplevotingapp 
+    spec:
+      containers:
+        - name: habaruhexamplevotingapp 
+          image: zemogadevopslabs.azurecr.io/habaruhexamplevotingapp
+          ports:
+          - containerPort: 80
